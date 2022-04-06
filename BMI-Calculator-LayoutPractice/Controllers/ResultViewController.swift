@@ -12,6 +12,7 @@ class ResultViewController: UIViewController {
     
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var additionLabel: UILabel!
+    @IBOutlet weak var backgroundView: UIImageView!
     
     
     var bmi: BmiModel?
@@ -20,7 +21,8 @@ class ResultViewController: UIViewController {
         super.viewDidLoad()
 
         resultLabel.text = bmi?.bmi
-        
+        additionLabel.text = bmi?.advice
+        backgroundView.backgroundColor = bmi?.color
         
     }
     

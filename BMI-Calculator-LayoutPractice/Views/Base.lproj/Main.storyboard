@@ -206,6 +206,7 @@
                     </view>
                     <connections>
                         <outlet property="additionLabel" destination="wL7-Mk-scd" id="W26-nB-A1r"/>
+                        <outlet property="backgroundView" destination="OwB-Gr-By2" id="2qN-jF-aAX"/>
                         <outlet property="resultLabel" destination="hWo-gc-8p7" id="ikD-D9-A7N"/>
                     </connections>
                 </viewController>

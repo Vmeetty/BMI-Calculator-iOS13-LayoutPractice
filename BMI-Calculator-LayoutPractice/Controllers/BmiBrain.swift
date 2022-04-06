@@ -23,22 +23,22 @@ struct BmiBrain {
         switch multipiler {
         case _ where multipiler < 18.5:
             adviceStr = "Underweight"
-            color = .gray
-        case 18.5...24.9:
-            adviceStr = "Normal"
-            color = .blue
+            color = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
         case _ where multipiler > 24.9:
             adviceStr = "Overweight"
-            color = .brown
-        default : break
+            color = #colorLiteral(red: 0.5058823824, green: 0.3372549117, blue: 0.06666667014, alpha: 1)
+        default :
+            adviceStr = "Normal"
+            color = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
+//        default : break
         }
         print(adviceStr)
         print(color)
         bmi = BmiModel(bmi: bmiStr, advice: adviceStr, color: color ?? .black)
     }
     
-    func getBMI() -> String {
-        return bmi?.bmi ?? "nil"
+    func getBMI() -> BmiModel {
+        return bmi ?? BmiModel(bmi: "00", advice: "nothing", color: .brown)
     }
     
     func getRoundedValueOf(slider: UISlider, pas: Int) -> String {
